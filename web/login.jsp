@@ -4,6 +4,7 @@
     Author     : Jay
 --%>
 
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
@@ -33,14 +34,47 @@
 			</ul>
 		</div>
 	</div>
-
+    
     <div style="padding-left: 650px">	
-	 <form action="logincheck" method="post">
-
-            User name :<input type="text" name="username" /></br></br>
-            Password :<input type="password" name="password" /></br></br>
-            <input type="submit" value="Login" />
-
+	 <form name="login" action="login" method="POST">
+            
+            <div class="form-group">
+            <div class="row">
+                <div class="col-lg-2 col-sm-offset-1">
+                    <label for="username">User Name:</label>
+                    <label for="username" style="color:red">*</label>
+                </div> 
+                <div class="col-lg-4">
+                    <input type="text" value="<%=session.getAttribute("email")%>" class="form-control" id="username" name="username"/>
+                </div>    
+            </div> 
+            </div>
+            <div class="form-group">
+            <div class="row">
+                <div class="col-lg-2 col-sm-offset-1">
+                    <label for="password">Password:</label>
+                    <label for="password" style="color:red">*</label>
+                </div> 
+                <div class="col-lg-4">
+                    <input type="password" class="form-control" name="password"/>
+                </div>    
+            </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-lg-4 col-lg-offset-3">
+                    <input type="submit" value="Submit" class="btn btn-default col-lg-6"/>
+                </div>
+            </div>
+            <div class="col-lg-4 col-lg-offset-3">
+                <a href="forgotusername.jsp">Forgot UserName</a>
+                <a href="forgotpassword.jsp">Forgot Password</a>
+            </div><br><br>
+            
+            <div class="error">
+                <div class="well" style="color:red">${loginFailedMessage}</div>
+            </div>
+            
+            
         </form>
     </div>
 <div id="footer">
