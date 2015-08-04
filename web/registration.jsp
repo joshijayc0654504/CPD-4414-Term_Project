@@ -14,6 +14,21 @@
 <title>Registration</title>
 <link href="http://fonts.googleapis.com/css?family=Oxygen:400,700,300" rel="stylesheet" type="text/css" />
 <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+
+<script type="text/javascript">
+           
+            function validateUserName(){
+                var text=document.getElementById("fName").value;
+                if(text==""){
+                    document.getElementById("errorFirstName").innerHTML = "Mandatory field";
+                    document.getElementById("errorFirstName").style.color="red";
+                }else{
+                    $("#errorFirstName").html("OK");
+                    $("#errorFirstName").css({color: "green"});
+                }   
+            }
+</script>
+
 </head>
 <body>
 <div id="wrapper">
@@ -33,16 +48,100 @@
 	</div>
 
 	<div style="padding-left: 650px">		
-	 <form action="reg.jsp" method="post">
-            
-            First name :<input type="text" name="fname" /><br></br>
-            Last name :<input type="text" name="lname" /><br></br>
-            Email :<input type="text" name="email" /></br></br>
-            User name :<input type="text" name="userid" /><br></br>
-            Password :<input type="password" name="pwd" /><br></br>
-            <input type="submit" value="Sign Up"/>
-
-        </form>
+	 <form name="registration" id="registration" action="logincheck" method="post">
+                <div class="row form-group">
+                    <div class="col-lg-2">
+                        <label for="firstName">First Name</label>
+                        <label for="firstName" style="color: red">*</label>
+                    </div>
+                    <div class="col-lg-4">
+                        <input type="text" name="firstName" value="" id="fName" class="form-control" onblur="validateUserName();" placeholder="Enter your First Name" value="${User.firstname}" />
+                    </div> 
+                    <div class="col-md-3" id="errorFirstName"></div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-lg-2">
+                        <label for="lastName">Last Name</label>
+                        <label for="lastName" style="color: red">*</label>
+                    </div>
+                    <div class="col-lg-4">
+                        <input type="text" name="lastName" class="form-control" placeholder="Enter your Last Name" value="${Users.lastname}"/>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-lg-2">
+                        <label for="userName">User Name</label>
+                        <label for="userName" style="color: red">*</label>
+                    </div>
+                    <div class="col-lg-4">
+                        <input type="text" name="userName" class="form-control" placeholder="Enter your User Name"/>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-lg-2">
+                        <label for="password">Password</label>
+                        <label for="password" style="color: red">*</label>
+                    </div>
+                    <div class="col-lg-4">
+                        <input type="password" name="password" class="form-control" placeholder="Enter your Password"/>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-lg-2">
+                        <label for="cpassword">Confirm Password</label>
+                        <label for="cpassword" style="color: red">*</label>
+                    </div>
+                    <div class="col-lg-4">
+                        <input type="password" name="cpassword" class="form-control" placeholder="Re enter your Password"/>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-lg-2">
+                        <label for="gender">Gender</label>
+                        <label for="gender" style="color: red">*</label>
+                    </div>
+                    <div class="col-lg-4">
+                        Male <input type="radio" name="gender" value="Male" />
+                        Female <input type="radio" name="gender" value="Female" />
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-lg-2">
+                        <label for="email">Email</label>
+                        <label for="email" style="color: red">*</label>
+                    </div>
+                    <div class="col-lg-4">
+                        <input type="text" name="email" class="form-control" placeholder="Enter your Email Id"/>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-lg-2">
+                        <label for="address">Address</label>
+                        <label for="address" style="color: red">*</label>
+                    </div>
+                    <div class="col-lg-4">
+                        <input type="text" name="address" class="form-control" placeholder="Enter your Address"/>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-lg-2">
+                        <label for="city">City</label>
+                        <label for="city" style="color: red">*</label>
+                    </div>
+                    <div class="col-lg-4">
+                        <input type="text" name="city" class="form-control" placeholder="Enter your City"/>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-lg-4 col-lg-offset-2">
+                        <input type="submit" value="Submit" class="btn btn-default col-lg-6"/>
+                    </div>
+                </div>
+            </form>
+                
+            <div class="error">
+                <div class="well" style="color:red">${duplicateUserName}</div>
+            </div>
         </div>
 
 <div id="footer">
