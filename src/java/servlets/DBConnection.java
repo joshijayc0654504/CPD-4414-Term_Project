@@ -38,7 +38,7 @@ public class DBConnection {
         int rowCount=0;
         try {
             Connection con=getConnection();
-            String query="SELECT COUNT(*) count FROM client WHERE username=?";
+            String query="SELECT COUNT(*) count FROM users WHERE username=?";
             PreparedStatement stmt=con.prepareStatement(query);
             stmt.setString(1, username);
             ResultSet rs=stmt.executeQuery();
@@ -55,7 +55,7 @@ public class DBConnection {
         int rowCount=0;
         try {
             Connection con=getConnection();
-            String query="SELECT COUNT(*) count FROM client WHERE emailid=?";
+            String query="SELECT COUNT(*) count FROM users WHERE emailid=?";
             PreparedStatement stmt=con.prepareStatement(query);
             stmt.setString(1, email);
             ResultSet rs=stmt.executeQuery();
