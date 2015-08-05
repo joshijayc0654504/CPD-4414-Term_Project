@@ -37,28 +37,28 @@
 	</div>
     
     <div style="padding-left: 650px">	
-	 <form name="login" action="login" method="POST">
+	 <form name="login" action="login" method="post">
             
             <div class="form-group">
             <div class="row">
                 <div class="col-lg-2 col-sm-offset-1">
                     <label for="username">User Name:</label>
-                    <label for="username" style="color:red">*</label>
+                    <label for="username" style="color:red">*</label>&nbsp;&nbsp;&nbsp;
+                    <input type="text" value="<%=session.getAttribute("username")%>" class="form-control" id="username" name="username" /></br></br>
                 </div> 
-                <div class="col-lg-4">
-                    <input type="text" value="<%=session.getAttribute("email")%>" class="form-control" id="username" name="username"/>
-                </div>    
+                    
             </div> 
             </div>
             <div class="form-group">
             <div class="row">
                 <div class="col-lg-2 col-sm-offset-1">
                     <label for="password">Password:</label>
-                    <label for="password" style="color:red">*</label>
+                    <label for="password" style="color:red">*</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="password" class="form-control" name="password" />
                 </div> 
-                <div class="col-lg-4">
-                    <input type="password" class="form-control" name="password"/>
-                </div>    
+                
+                    
+                   
             </div>
             </div>
             <div class="row form-group">
