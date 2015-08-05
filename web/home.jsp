@@ -100,7 +100,7 @@ Rapid development and flexible manufacturing system along with effective global 
 </div>
 
 <div id="footer">
-	<p>Design by <a href="https://www.facebook.com/jayjoshi.j?ref=tn_tnmn">Jay Joshi</a>.
+	<p>&COPY;2015 All Rights Reserved.Design by <a href="https://ca.linkedin.com/pub/jay-joshi/24/293/a36">Jay Joshi</a>.
 </div>
 <!-- end #footer -->
 </body>

@@ -43,7 +43,7 @@
                 <div class="col-lg-2 col-sm-offset-1">
                     <label for="username">User Name:</label>
                     <label for="username" style="color:red">*</label>&nbsp;&nbsp;
-                    <input type="text" value="<%=session.getAttribute("username")%>" class="form-control" id="username" name="username"/>
+                    <input type="text" value="" class="form-control" id="username" name="username"/>
                 </div> 
                    
             </div> </br></br>
@@ -73,7 +73,7 @@
         </form>
     </div>
 <div id="footer">
-	<p>Design by <a href="https://www.facebook.com/jayjoshi.j?ref=tn_tnmn">Jay Joshi</a>.
+	<p>&COPY;2015 All Rights Reserved.Design by <a href="https://ca.linkedin.com/pub/jay-joshi/24/293/a36">Jay Joshi</a>.
 </div>
 <!-- end #footer -->
 </body>

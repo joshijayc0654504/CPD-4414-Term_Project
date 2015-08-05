@@ -66,10 +66,10 @@
                     <input type="submit" value="Submit" class="btn btn-default col-lg-6"/>
                 </div>
             </div>
-            <div class="col-lg-4 col-lg-offset-3">
+            <!--<div class="col-lg-4 col-lg-offset-3">
                 <a href="forgotusername.jsp">Forgot UserName</a>
                 <a href="forgotpassword.jsp">Forgot Password</a>
-            </div><br><br>
+            </div><br><br>-->
             
             <div class="error">
                 <div class="well" style="color:red">${loginFailedMessage}</div>
@@ -79,7 +79,7 @@
         </form>
     </div>
 <div id="footer">
-	<p>Design by <a href="https://www.facebook.com/jayjoshi.j?ref=tn_tnmn">Jay Joshi</a>.
+	<p>&COPY;2015 All Rights Reserved.Design by <a href="https://ca.linkedin.com/pub/jay-joshi/24/293/a36">Jay Joshi</a>.
 </div>
 <!-- end #footer -->
 </body>
