@@ -36,7 +36,9 @@
 	</div>
     
     <div style="padding-left: 650px">	
-	 <form name="login" action="login" method="POST">
+	 <form name="login" action="login
+               
+               " method="POST">
             
             <div class="form-group">
             <div class="row">
