@@ -86,8 +86,8 @@ public class login extends HttpServlet {
         Connection con = conn.getConnection();
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
-        if ((password.equals("admin") && uname.equals("admin"))) {
-            response.sendRedirect("product.jsp");
+        if ((password.equals("admin") && uname.equals("jay"))) {
+            response.sendRedirect("addproduct.jsp");
         }
         try {
             if (con != null) {
@@ -104,16 +104,16 @@ public class login extends HttpServlet {
                 if (count == 1) {
                     HttpSession session = request.getSession();
                     session.setAttribute("username", uname);
-                    response.sendRedirect("welcome.jsp");
+                    response.sendRedirect("home.jsp");
                 } else {
 
-                    request.setAttribute("errorMessage", "Sorry Username and Password are incorrect");
+                    request.setAttribute("errorMessage", "Incorrect Username and Password");
                     RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
                     rd.include(request, response);
 
                 }
             } else {
-                out.println("Error in database connection");
+                out.println("Error while connecting database");
             }
         } catch (SQLException e) {
             out.println(e.getMessage());
