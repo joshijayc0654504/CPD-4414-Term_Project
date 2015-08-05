@@ -27,8 +27,9 @@
 			<ul>
 				<li class="current_page_item"><a href="home.jsp">Home</a></li>
 				<li><a href="product.jsp">Product</a></li>
-				<li><a href="login.jsp">Login</a></li>
+				
 				<li><a href="contact_us.jsp">Contact Us</a></li>
+                                <li><a href="index.html">Logout</a></li>
 			</ul>
 		</div>
 	</div>
