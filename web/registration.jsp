@@ -27,8 +27,16 @@
                     $("#errorFirstName").css({color: "green"});
                 }   
             }
+            
+            
 </script>
-
+<style>
+    
+    .pad{
+        padding-left: 50px
+        
+    }
+</style>
 </head>
 <body>
 <div id="wrapper">
@@ -45,93 +53,81 @@
 				<li><a href="contact_us.jsp">Contact Us</a></li>
 			</ul>
 		</div>
-	</div>
+        </div>
 
-	<div style="padding-left: 650px">		
+	<div style="padding-left: 550px">		
 	 <form name="registration" id="registration" action="Regcheck" method="post">
                 <div class="row form-group">
                     <div class="col-lg-2">
                         <label for="firstname">First Name</label>
-                        <label for="firstname" style="color: red">*</label>
-                    </div>
-                    <div class="col-lg-4">
+                        <label for="firstname" style="color: red">*</label>&nbsp;&nbsp;&nbsp;
                         <input type="text" name="firstname" value="" id="fName" class="form-control" onblur="validateUserName();" placeholder="Enter your First Name" value="${User.firstname}" />
-                    </div> 
+                    </div>
+                    
                     <div class="col-md-3" id="errorFirstName"></div>
-                </div>
+                </div><br>
                 <div class="row form-group">
                     <div class="col-lg-2">
                         <label for="lastname">Last Name</label>
-                        <label for="lastname" style="color: red">*</label>
-                    </div>
-                    <div class="col-lg-4">
+                        <label for="lastname" style="color: red">*</label>&nbsp;&nbsp;&nbsp;
                         <input type="text" name="lastname" class="form-control" placeholder="Enter your Last Name" value="${Users.lastname}"/>
                     </div>
-                </div>
+                </div><br>
                 <div class="row form-group">
                     <div class="col-lg-2">
                         <label for="username">User Name</label>
-                        <label for="username" style="color: red">*</label>
-                    </div>
-                    <div class="col-lg-4">
+                        <label for="username" style="color: red">*</label>&nbsp;&nbsp;&nbsp;
                         <input type="text" name="username" class="form-control" placeholder="Enter your User Name"/>
                     </div>
-                </div>
+                   
+                </div><br>
                 <div class="row form-group">
                     <div class="col-lg-2">
                         <label for="password">Password</label>
-                        <label for="password" style="color: red">*</label>
-                    </div>
-                    <div class="col-lg-4">
+                        <label for="password" style="color: red">*</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <input type="password" name="password" class="form-control" placeholder="Enter your Password"/>
                     </div>
-                </div>
+                </div><br>
                 <div class="row form-group">
                     <div class="col-lg-2">
                         <label for="cpassword">Confirm Password</label>
-                        <label for="cpassword" style="color: red">*</label>
-                    </div>
-                    <div class="col-lg-4">
+                        <label for="cpassword" style="color: red">*</label>&nbsp;&nbsp;&nbsp;
                         <input type="password" name="cpassword" class="form-control" placeholder="Re enter your Password"/>
                     </div>
                 </div>
                 <div class="row form-group">
                     <div class="col-lg-2">
                         <label for="gender">Gender</label>
-                        <label for="gender" style="color: red">*</label>
-                    </div>
-                    <div class="col-lg-4">
+                        <label for="gender" style="color: red">*</label>&nbsp;&nbsp;&nbsp;
                         Male <input type="radio" name="gender" value="Male" />
                         Female <input type="radio" name="gender" value="Female" />
                     </div>
-                </div>
+                    
+                </div><br>
                 <div class="row form-group">
                     <div class="col-lg-2">
                         <label for="emailid">Email</label>
-                        <label for="emailid" style="color: red">*</label>
-                    </div>
-                    <div class="col-lg-4">
+                        <label for="emailid" style="color: red">*</label>&nbsp;&nbsp;&nbsp;
                         <input type="text" name="emailid" class="form-control" placeholder="Enter your Email Id"/>
                     </div>
-                </div>
+                    
+                </div><br>
                 <div class="row form-group">
                     <div class="col-lg-2">
                         <label for="address">Address</label>
-                        <label for="address" style="color: red">*</label>
-                    </div>
-                    <div class="col-lg-4">
+                        <label for="address" style="color: red">*</label>&nbsp;&nbsp;&nbsp;
                         <input type="text" name="address" class="form-control" placeholder="Enter your Address"/>
                     </div>
-                </div>
+                   
+                </div><br>
                 <div class="row form-group">
                     <div class="col-lg-2">
                         <label for="city">City</label>
-                        <label for="city" style="color: red">*</label>
-                    </div>
-                    <div class="col-lg-4">
+                        <label for="city" style="color: red">*</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <input type="text" name="city" class="form-control" placeholder="Enter your City"/>
                     </div>
-                </div>
+                    
+                </div><br>
                 <div class="row form-group">
                     <div class="col-lg-4 col-lg-offset-2">
                         <input type="submit" value="Submit" class="btn btn-default col-lg-6"/>
