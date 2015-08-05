@@ -36,28 +36,26 @@
     
     <div style="padding-left: 650px">	
 	 <form name="adminlogin" action="login" method="POST">
-             <h1>Admin Login</h1>
+             <h1>Admin Login</h1></br>
             
             <div class="form-group">
             <div class="row">
                 <div class="col-lg-2 col-sm-offset-1">
                     <label for="username">User Name:</label>
-                    <label for="username" style="color:red">*</label>
+                    <label for="username" style="color:red">*</label>&nbsp;&nbsp;
+                    <input type="text" value="<%=session.getAttribute("username")%>" class="form-control" id="username" name="username"/>
                 </div> 
-                <div class="col-lg-4">
-                    <input type="text" value="<%=session.getAttribute("email")%>" class="form-control" id="username" name="username"/>
-                </div>    
-            </div> 
+                   
+            </div> </br></br>
             </div>
             <div class="form-group">
             <div class="row">
                 <div class="col-lg-2 col-sm-offset-1">
                     <label for="password">Password:</label>
-                    <label for="password" style="color:red">*</label>
+                    <label for="password" style="color:red">*</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                     <input type="password" class="form-control" name="password"/>
                 </div> 
-                <div class="col-lg-4">
-                    <input type="password" class="form-control" name="password"/>
-                </div>    
+                  
             </div>
             </div>
             <div class="row form-group">
@@ -65,10 +63,7 @@
                     <input type="submit" value="Submit" class="btn btn-default col-lg-6"/>
                 </div>
             </div>
-            <div class="col-lg-4 col-lg-offset-3">
-                <a href="forgotusername.jsp">Forgot UserName</a>
-                <a href="forgotpassword.jsp">Forgot Password</a>
-            </div><br><br>
+           
             
             <div class="error">
                 <div class="well" style="color:red">${loginFailedMessage}</div>
