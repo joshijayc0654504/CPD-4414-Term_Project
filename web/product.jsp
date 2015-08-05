@@ -80,15 +80,15 @@
                 <div id="tbox1">
                     <div class="box-style box-style01">
                         <div class="content">
-                            <div class="image"><img src="images/4.JPG" width="324" height="200" alt="" /></div>
+                            <div class="image"><img src="images/13.JPG" width="324" height="200" alt="" /></div>
                             
 
                         </div>
                     </div></br>
           
          
-                    Product Name: <%=pname%>||
-                    Price:<%=price%>  |  <input type="button" value="Add To Cart">
+                    <b>Product Name:</b>&nbsp; <%=pname%>&nbsp;&nbsp;||
+                    <b>Price:</b>&nbsp; <%=price%>  ||  <input type="button" value="Add To Cart">
                 </div>
                 
 <!--                <div id="tbox2">
