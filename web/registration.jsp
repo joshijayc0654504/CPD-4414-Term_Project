@@ -48,33 +48,33 @@
 	</div>
 
 	<div style="padding-left: 650px">		
-	 <form name="registration" id="registration" action="logincheck" method="post">
+	 <form name="registration" id="registration" action="Regcheck" method="post">
                 <div class="row form-group">
                     <div class="col-lg-2">
-                        <label for="firstName">First Name</label>
-                        <label for="firstName" style="color: red">*</label>
+                        <label for="firstname">First Name</label>
+                        <label for="firstname" style="color: red">*</label>
                     </div>
                     <div class="col-lg-4">
-                        <input type="text" name="firstName" value="" id="fName" class="form-control" onblur="validateUserName();" placeholder="Enter your First Name" value="${User.firstname}" />
+                        <input type="text" name="firstname" value="" id="fName" class="form-control" onblur="validateUserName();" placeholder="Enter your First Name" value="${User.firstname}" />
                     </div> 
                     <div class="col-md-3" id="errorFirstName"></div>
                 </div>
                 <div class="row form-group">
                     <div class="col-lg-2">
-                        <label for="lastName">Last Name</label>
-                        <label for="lastName" style="color: red">*</label>
+                        <label for="lastname">Last Name</label>
+                        <label for="lastname" style="color: red">*</label>
                     </div>
                     <div class="col-lg-4">
-                        <input type="text" name="lastName" class="form-control" placeholder="Enter your Last Name" value="${Users.lastname}"/>
+                        <input type="text" name="lastname" class="form-control" placeholder="Enter your Last Name" value="${Users.lastname}"/>
                     </div>
                 </div>
                 <div class="row form-group">
                     <div class="col-lg-2">
-                        <label for="userName">User Name</label>
-                        <label for="userName" style="color: red">*</label>
+                        <label for="username">User Name</label>
+                        <label for="username" style="color: red">*</label>
                     </div>
                     <div class="col-lg-4">
-                        <input type="text" name="userName" class="form-control" placeholder="Enter your User Name"/>
+                        <input type="text" name="username" class="form-control" placeholder="Enter your User Name"/>
                     </div>
                 </div>
                 <div class="row form-group">
@@ -107,11 +107,11 @@
                 </div>
                 <div class="row form-group">
                     <div class="col-lg-2">
-                        <label for="email">Email</label>
-                        <label for="email" style="color: red">*</label>
+                        <label for="emailid">Email</label>
+                        <label for="emailid" style="color: red">*</label>
                     </div>
                     <div class="col-lg-4">
-                        <input type="text" name="email" class="form-control" placeholder="Enter your Email Id"/>
+                        <input type="text" name="emailid" class="form-control" placeholder="Enter your Email Id"/>
                     </div>
                 </div>
                 <div class="row form-group">
