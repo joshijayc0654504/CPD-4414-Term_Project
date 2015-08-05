@@ -4,7 +4,48 @@
     Author     : Jay
 --%>
 
+<%@page import="java.util.ListIterator"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.SQLException"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="servlets.DBConnection"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%
+
+   
+    int productid = 0;
+    String pname=null;
+  
+    double price=0.00;
+    
+    Connection conn = null;
+    
+            Class.forName("com.mysql.jdbc.Driver");
+        
+            String jdbc = "jdbc:mysql://localhost/clicknshop";
+            conn = DriverManager.getConnection(jdbc, "root", "");
+        
+        
+        PreparedStatement st = conn.prepareStatement("SELECT * FROM product");
+        //st.setString(1, productid);
+        ResultSet rs = st.executeQuery();
+    while(rs.next()){
+       
+        productid = rs.getInt("productid");
+        pname = rs.getString("pname");
+        price = rs.getDouble("price");
+        
+    }   
+    String userid=null;
+    boolean check = false;
+    if(session.getAttribute("userid")!=null){
+        userid = (String)session.getAttribute("userid");
+        check = true;
+    }
+    %>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -22,13 +63,16 @@
                 <p>Our Product Your Choice</p>
                 
             </div>
+            <form action="cart" name="product">
+                <input type="hidden" name="productid" value="<%=productid%>" />
             <div id="menu-wrapper">
                 <div id="menu" class="container">
                     <ul>
                         <li><a href="home.jsp">Home</a></li>
                         <li class="current_page_item"><a href="product.jsp">Product</a></li>
-                        <li><a href="login.jsp">Login</a></li>
+                        <li><a href="cart.jsp">Cart</a></li>
                         <li><a href="contact_us.jsp">Contact Us</a></li>
+                        <li><a href="index.html">Logout</a></li>
                     </ul>
                 </div>
             </div>
@@ -41,17 +85,20 @@
 
                         </div>
                     </div></br>
-                    Price:$6  |  <input type="button" value="Add To Cart">
+          
+         
+                    Product Name: <%=pname%>||
+                    Price:<%=price%>  |  <input type="button" value="Add To Cart">
                 </div>
                 
-                <div id="tbox2">
+<!--                <div id="tbox2">
                     <div class="box-style box-style02">
                         <div class="content">
                             <div class="image"><img src="images/2.JPG" width="324" height="200" alt="" /></div>
 
                         </div>
                     </div></br>
-                    Price:$12 |  <input type="button" value="Add To Cart">
+                    Price:|  <input type="button" value="Add To Cart">
                 </div>
                 <div id="tbox3">
                     <div class="box-style box-style03">
@@ -60,10 +107,11 @@
 
                         </div>
                     </div></br>
-                    Price:$16  |  <input type="button" value="Add To Cart">
-                </div>
+                    Price: |  <input type="button" value="Add To Cart">
+                </div>-->
                 
             </div>
+            </form>
             <div id="page" class="container">
                 <div id="content">
                     <div class="post">
