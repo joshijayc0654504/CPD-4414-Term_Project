@@ -23,7 +23,11 @@
 	</div>
 	<div id="menu-wrapper">
 		<div id="menu" class="container">
-			
+			<ul>
+				
+                                <li><a href="adminlogin.jsp">Logout</a></li>
+				
+			</ul>
 		</div>
 	</div>
     
@@ -43,13 +47,13 @@
                     <td><input type="text" name="price" required/></td>
                 </tr>
                 
-                <tr>
+                <!--<tr>
                     <td>Product Image</td>
                     <td><input type="file" Sname="photo" size="50"/></td>
-                </tr>
+                </tr>-->
                 <tr>
                     <td colspan="2" align="center">
-                        <input type="submit" name="uploadImage" value="Upload"/>
+                        <input type="submit" name="uploadImage" value="Add"/>
                     </td>
                 </tr>
             </table>
