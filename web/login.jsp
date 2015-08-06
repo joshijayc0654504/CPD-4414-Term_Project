@@ -44,7 +44,7 @@
                 <div class="col-lg-2 col-sm-offset-1">
                     <label for="username">User Name:</label>
                     <label for="username" style="color:red">*</label>&nbsp;&nbsp;&nbsp;
-                    <input type="text" value="<%=session.getAttribute("username")%>" class="form-control" id="username" name="username" /></br></br>
+                    <input type="text" value="" class="form-control" id="username" name="username" /></br></br>
                 </div> 
                     
             </div> 
