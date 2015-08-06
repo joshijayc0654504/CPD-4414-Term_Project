@@ -91,56 +91,33 @@ public class Addproduct extends HttpServlet {
         String pname = request.getParameter("pname");
         String pr =request.getParameter("price");
         double price = Double.parseDouble(pr);
-        /*String photo = request.getParameter("photo");
-        HttpSession session = request.getSession();
-        InputStream inputStream = null; // input stream of the upload file
-        
          
-        // obtains the upload file part in this multipart request
-        Part filePart = request.getPart("photo");
-        if (filePart != null) {
-
-            // obtains input stream of the upload file
-            inputStream = filePart.getInputStream();
-        }*/
-         
-        
-        
-       Product products = new Product(pname, price);
-       DBConnection  conn=new DBConnection();
-       Connection con=conn.getConnection();
+    
+          PrintWriter out=response.getWriter();
+       
+                 Product products = new Product(pname, price);
+                 DBConnection  conn=new DBConnection();
+                 Connection con=conn.getConnection();
              try {
                if(con != null){
-                //String query="INSERT INTO product (pname,price,photo) VALUES(?,?,?)";
-                String query="INSERT INTO product (pname,price) VALUES(?,?)";
+                String query="INSERT INTO product(pname,price) VALUES(?,?)";
                 PreparedStatement stmt=con.prepareStatement(query);
                 stmt.setString(1, products.getPname());
                 stmt.setDouble(2, products.getPrice());
                
-               /* if (inputStream != null) {
-                // fetches input stream of the upload file for the blob column
-                stmt.setBlob(3, inputStream);
-                }*/
- 
-            // sends the statement to the database server
                
-               //int row = stmt.executeUpdate();
-              /* if (row > 0) {
-                response.sendRedirect("product.jsp");
-                out.println("You have been successfully added");
-                }*/
                 stmt.executeUpdate();
                 response.sendRedirect("product.jsp");
-                out.println("You have been successfully added!!");
+                out.println("You have been successfully signed up");
                 
                 } else {
-                out.println("Error while connecting to database!!");
+                out.println("Error in database connection");
                 }
              } catch (SQLException e) { 
-                 out.println("Wrong with something!!");
+                 out.println("Something is wrong");
                }
-        
-    }
+        }
+
 
     /**
      * Returns a short description of the servlet.
